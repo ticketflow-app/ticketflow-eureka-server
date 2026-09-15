@@ -1,0 +1,15 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    # En desarrollo, evita que un servicio caído quede "protegido" por self-preservation
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 5000
